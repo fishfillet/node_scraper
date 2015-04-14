@@ -27,7 +27,7 @@ function parseBody(data){
       var fileType = (check[0]); 
     }
 
-    var test = '\n' + permission + ',' + absoluteUrl + ',' + fileType;
+    var test = permission + ',' + absoluteUrl + ',' + fileType + '\n';
 
     // fs.writeFile('message.csv', absoluteUrl, function (err) {
     // if (err) throw err;
