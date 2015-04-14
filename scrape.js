@@ -23,16 +23,22 @@ function parseBody(data){
     var images = $(this).children().last().text();
     var check = typeCheck.exec(images);
 
-
     if (check){
-      var fileType = check[0];
-      console.log(fileType);
+      fileType = (check[0]); 
     }
 
+    var test = '\n' + permission + ',' + absoluteUrl + ',' + fileType;
 
+    // fs.writeFile('message.csv', absoluteUrl, function (err) {
+    // if (err) throw err;
+    // console.log('It\'s saved!');
+    // });
 
+    fs.appendFile('message.csv', test, function (err) {
+    if (err) throw err;
+    console.log('The "data to append" was appended to file!');
+    });
 
   });
-
 }
 
