@@ -24,7 +24,7 @@ function parseBody(data){
     var check = typeCheck.exec(images);
 
     if (check){
-      fileType = (check[0]); 
+      var fileType = (check[0]); 
     }
 
     var test = '\n' + permission + ',' + absoluteUrl + ',' + fileType;
